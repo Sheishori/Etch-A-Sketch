@@ -10,3 +10,11 @@ for (i = 0; i < 20; i++) {
 		verticalLine.appendChild(square);
 	}
 }
+
+const grid = document.querySelectorAll(".square");
+
+grid.forEach((square) => {
+	square.addEventListener("mouseover", () => {
+		square.style.backgroundColor = "blue";
+	});
+});
