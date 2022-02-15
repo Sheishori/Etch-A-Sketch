@@ -69,7 +69,10 @@ document.addEventListener("mouseup", () => {
 });
 
 function resize () {
-	resolution = prompt("Choose number of squares per side:");
+	resolution = prompt("Choose number of squares per side (up to 100):");
+	while (resolution > 100) {
+		resolution = prompt("Number too big! Choose a new number (up to 100):");
+	}
 	if (resolution === null || resolution === '') exit;
 	container.textContent = '';
 	createGrid(resolution);
