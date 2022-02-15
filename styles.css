@@ -12,10 +12,12 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	gap: 10px;
 }
 
-.container {
-
+.colors button {
+	width: 30px;
+	height: 30px;
 }
 
 .vertical-line {

@@ -20,7 +20,7 @@ function createGrid (resolution) {
 		container.appendChild(verticalLine);
 		for (j = 0; j < resolution; j++) {
 			const square = document.createElement("div");
-			square.setAttribute('style', `width: ${size}px; height: ${size}px`)
+			square.setAttribute("style", `width: ${size}px; height: ${size}px`)
 			square.classList.add("square");
 			verticalLine.appendChild(square);
 		}
@@ -28,16 +28,26 @@ function createGrid (resolution) {
 	enableDrawing();
 }
 
+let color = "black";
+let colorsDiv = document.querySelector(".colors");
+let colorButtons = colorsDiv.querySelectorAll("button");
+colorButtons.forEach((button) => {
+	button.style.backgroundColor = button.className;
+	button.addEventListener("click", (e) => {
+		color = e.target.className;
+	});
+});
+
 function enableDrawing () {
 	grid = document.querySelectorAll(".square");
 	//two event listeners to detect whether a single square was clicked
 	//or if a line was drawn over a couple of them
 	grid.forEach((square) => {
 		square.addEventListener("mousedown", () => {
-			square.style.backgroundColor = "blue";
+			square.style.backgroundColor = color;
 		});
 		square.addEventListener("mouseover", () => {
-			if (clicked === 1) square.style.backgroundColor = "blue";
+			if (clicked === 1) square.style.backgroundColor = color;
 		});
 	});
 }
@@ -59,11 +69,10 @@ document.addEventListener("mouseup", () => {
 });
 
 function resize () {
-	resolution = prompt("Choose new resolution!");
+	resolution = prompt("Choose number of squares per side:");
 	if (resolution === null || resolution === '') exit;
 	container.textContent = '';
 	createGrid(resolution);
-	draw();
 }
 
 const resizeButton = document.querySelector(".resize");
