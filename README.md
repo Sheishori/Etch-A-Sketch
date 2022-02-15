@@ -2,7 +2,7 @@
 A simple drawing website.
 
 TODO:
-- Reset button
-- Grid resizing
+- ~~Reset button~~
+- ~~Grid resizing~~
 - UI
-- Colors (maybe)
+- More colors (maybe)
