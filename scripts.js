@@ -12,15 +12,12 @@ container.addEventListener("drop", (e) => {
 let resolution = 10;
 
 function createGrid (resolution) {
-	//calculate size of one square, using +1 to negate margin overlay
-	let size = 600/resolution +1;
 	for (i = 0; i < resolution; i++) {
 		const verticalLine = document.createElement("div");
 		verticalLine.classList.add("vertical-line");
 		container.appendChild(verticalLine);
 		for (j = 0; j < resolution; j++) {
 			const square = document.createElement("div");
-			square.setAttribute("style", `width: ${size}px; height: ${size}px`)
 			square.classList.add("square");
 			verticalLine.appendChild(square);
 		}
