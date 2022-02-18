@@ -7,7 +7,7 @@ html {
 }
 
 body {
-	min-height: 100vh;
+	min-height: 90vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -15,9 +15,18 @@ body {
 	gap: 10px;
 }
 
+.colors {
+	display: flex;
+	gap: 5px;
+}
+
 .colors button {
 	width: 30px;
 	height: 30px;
+}
+
+.colors .random {
+	width: auto;
 }
 
 .vertical-line {

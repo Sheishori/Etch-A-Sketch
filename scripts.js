@@ -38,16 +38,27 @@ colorButtons.forEach((button) => {
 	});
 });
 
+function randomColor () {
+	let random = `hsl(${Math.floor(Math.random()*360)},
+	100%, ${Math.floor(Math.random()*70)+ 20}%)`;
+	//numbers in last random inconsequential, just wanted to avoid too bright/dark colors
+	return random;
+}
+
 function enableDrawing () {
 	grid = document.querySelectorAll(".square");
 	//two event listeners to detect whether a single square was clicked
 	//or if a line was drawn over a couple of them
 	grid.forEach((square) => {
 		square.addEventListener("mousedown", () => {
-			square.style.backgroundColor = color;
+			if (color === "random") {
+				square.style.backgroundColor = randomColor();
+			} else square.style.backgroundColor = color;
 		});
 		square.addEventListener("mouseover", () => {
-			if (clicked === 1) square.style.backgroundColor = color;
+			if (color === "random" && clicked === 1) {
+				square.style.backgroundColor = randomColor();
+			} else if (clicked === 1) square.style.backgroundColor = color;
 		});
 	});
 }
