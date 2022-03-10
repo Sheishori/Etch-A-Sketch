@@ -42,12 +42,10 @@ function randomColor () {
 	return random;
 }
 
-function customColor () {
-	color = prompt("Enter a color (Name, RGB, HEX or HSL)");
-}
-
-const customButton = document.querySelector(".custom");
-customButton.addEventListener("click", customColor);
+const colorInput = document.querySelector("#custom");
+colorInput.addEventListener("input", (e) => {
+	color = colorInput.value;
+});
 
 function enableDrawing () {
 	grid = document.querySelectorAll(".square");
