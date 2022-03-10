@@ -5,30 +5,36 @@
 	<title>Etch-A-Sketch</title>
 	<link rel="stylesheet" href="styles.css">
 	<script src="scripts.js" defer></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> 
 </head>
 <body>
-	<h2>Pixel Pad</h2>
-	<div class="size-selection">
-		<span>Size:</span>
-		<input type="range" id="size" min="4" max="64" value="10">
-		<output id="size-value"></output>
-	</div>
-	<div class="container"></div>
-	<div class="colors">
-		<button class="pink"></button>
-		<button class="red"></button>
-		<button class="orange"></button>
-		<button class="yellow"></button>
-		<button class="lime"></button>
-		<button class="green"></button>
-		<button class="deepskyblue"></button>
-		<button class="blue"></button>
-		<button class="black"></button>
-		<button class="gray"></button>
-		<button class="white"></button>
-		<input type="color" id="custom">
-		<button class="random">random</button>
-	</div>
-	<button class="clear">Clear</button>
+	<header>Pixel Pad</header>
+	<main>
+		<div class="size-selection">
+			<span>Size:</span>
+			<input type="range" id="size" min="4" max="64" value="10">
+			<output id="size-value"></output>
+		</div>
+		<div class="container"></div>
+		<div class="colors">
+			<button class="pink"></button>
+			<button class="red"></button>
+			<button class="orange"></button>
+			<button class="yellow"></button>
+			<button class="lime"></button>
+			<button class="green"></button>
+			<button class="deepskyblue"></button>
+			<button class="blue"></button>
+			<button class="black"></button>
+			<button class="gray"></button>
+			<button class="white"></button>
+			<input type="color" id="custom">
+			<button class="random">random</button>
+		</div>
+		<button class="clear">Clear</button>
+	</main>
+	<footer>Copyright © Sheishori</footer>
 </body>
 </html>
