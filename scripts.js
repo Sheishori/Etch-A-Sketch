@@ -82,17 +82,16 @@ document.addEventListener("mouseup", () => {
 });
 
 function resize () {
-	resolution = prompt("Choose number of squares per side (up to 100):");
-	while (resolution > 100) {
-		resolution = prompt("Number too big! Choose a new number (up to 100):");
-	}
-	if (resolution === null || resolution === '') exit;
+	resolution = sizeSlider.value;
+	sizeValue.textContent = sizeSlider.value;
 	container.textContent = '';
 	createGrid(resolution);
 }
 
-const resizeButton = document.querySelector(".resize");
-resizeButton.addEventListener("click", resize);
+const sizeSlider = document.querySelector("#size");
+const sizeValue = document.querySelector("#size-value");
+sizeValue.textContent = sizeSlider.value;
+sizeSlider.addEventListener("input", resize);
 
 const clearButton = document.querySelector(".clear");
 clearButton.addEventListener("click", () => {

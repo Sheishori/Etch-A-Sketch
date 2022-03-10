@@ -16,6 +16,12 @@ body {
 	background-color: rgb(233, 233, 233);
 }
 
+.size-selection {
+  display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
 .colors {
 	display: flex;
 	gap: 5px;

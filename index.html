@@ -8,9 +8,10 @@
 </head>
 <body>
 	<h2>Pixel Pad</h2>
-	<div class="buttons">
-		<button class="resize">Resize</button>
-		<button class="clear">Clear</button>
+	<div class="size-selection">
+		<span>Size:</span>
+		<input type="range" id="size" min="4" max="64" value="10">
+		<output id="size-value"></output>
 	</div>
 	<div class="container"></div>
 	<div class="colors">
@@ -28,5 +29,6 @@
 		<input type="color" id="custom">
 		<button class="random">random</button>
 	</div>
+	<button class="clear">Clear</button>
 </body>
 </html>
